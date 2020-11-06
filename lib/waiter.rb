@@ -36,11 +36,12 @@ class Waiter
   
   def best_tipper
    p self
-   p Meal.all.each_with_index do |meal|
-     p meal
-   end
+   #p Meal.all.each_with_index do |meal|
+    # p meal
+   #end
    
-   
+   best = Meal.all.max_by { |meal| meal.tip}
+   p best
    
    # Meal.all.max_by do |meal|
     # p meal.customer
