@@ -41,7 +41,7 @@ class Waiter
    #end
    
    best = Meal.all.max_by { |meal| meal.tip}
-   p best
+   p best.customer
    
    # Meal.all.max_by do |meal|
     # p meal.customer
